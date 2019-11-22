@@ -1,9 +1,4 @@
-
-
 public class MethodsLecStudent {
-
-    public static void main(String[] args) {
-
 
 //  METHODS
 
@@ -11,25 +6,38 @@ public class MethodsLecStudent {
     TO DO TOGETHER: Write a public static method called orderFood that
     prints the message "I would like fries please."
  */
-
+//    public static void orderFood() {
+//            System.out.println("I would like fries please");
+//        }
 
 /*
     TO DO: Create a main method in this class. Use it to call your
     orderFood method. Run the program to see the results.
  */
+    public static void main(String[] args) {
+        orderFood();
+        favoriteSong();
+        weeksIn();
+        orderFood("burger");
 
+    }
 
 /*
     TO DO: Write a public static method called favoriteSong that prints
     your favorite song.
  */
+    public static void favoriteSong() {
+        System.out.println("Everybody Wants to Rule the World");
+    }
 
 
 /*
     TO DO: Write a public static method called weeksIn that prints
     message saying how many weeks you've been at Codeup.
  */
-
+    public static void weeksIn() {
+        System.out.println("10 weeks");
+    }
 
 //  METHOD OVERLOADING
 
@@ -39,12 +47,28 @@ public class MethodsLecStudent {
     ordering.
  */
 
+    public static void orderFood() {
+        System.out.println("I would like fries please!");
+    }
+    public static void orderFood(String food) {
+        System.out.printf("I would like %s please!/n", food);
+    }
+    public static void orderFood(String item, int number) {
+        System.out.printf("I would like %d %s/n",number,item);
+    }
+
+    public static void orderFood(String item1, String item2) {
+        System.out.printf("I would like %s and %s\n",item1,item2);
+    }
+
 /*
     TO DO: Overload orderFood again. Create a version that takes in two
     parameters: a String replacing the item being ordered, and an int that
     represents how many of the item they would like to order. Display a new
     message using these arguments.
  */
+
+
 
 /*
     TO DO TOGETHER: We'll overload orderFood again. We'll still have two
@@ -72,5 +96,5 @@ public class MethodsLecStudent {
 // HINT: you may need an additional method using a for loop to actually print
 // each number. This is the one you'll call in your main()
 
-    }
+
 }
