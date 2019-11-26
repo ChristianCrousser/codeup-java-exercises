@@ -73,3 +73,10 @@ public class TwentyOneSticks {
         }
     }
 }
+// hint to win:
+// 4
+// 7
+// 10
+// 13
+// 16
+// 19
