@@ -317,7 +317,7 @@ public class adventureGame {
                         " )_ !  ,  ;  ;  |" + "    )_ !  ,  ;  ;  |\n" +
                         " || .  .  :  :  |" + "    || .  .  :  :  |\n" +
                         " |\" .  |  :  .  |" + "    |\" .  |  :  .  |\n" +
-                        " |Health_;----._|" + "    |Armor_;----.__|");
+                        " |XOXXOX_;----._|" + "    |OXOOX_;----.__|");
                 System.out.println("There are two paths before you, the doors are labeled with unreadable runes. Which path will you take? Left or Right");
                 String pathChoice = sc.nextLine();
                 if (pathChoice.trim().equalsIgnoreCase("left")) {
@@ -470,7 +470,7 @@ public class adventureGame {
                         "                      |/ / /  `'  `  |/|/\n" +
                         "                       \\|\\|\n");
                 System.out.println("You have arrived in the Throne Room, there is a large winged figured in front of you, it is much scarier than your previous opponents.\n");
-                System.out.println("\"Prepare yourself human, I have killed more people then you've ever meet\" The winged figure says.");
+                System.out.println("\"Prepare yourself human, I have killed more people then you've ever met\" The winged figure says.");
                 while (heroHealth > 0 && vampireLordHealth > 0) {
                     System.out.println(heroName + "'s Health: " + heroHealth + ", Armor: " + heroArmor + ", Potions: " + heroPotion);
                     System.out.println(vampireLordName + "'s Health: " + vampireLordHealth + ", Armor: " + vampireLordArmor);
@@ -614,12 +614,12 @@ public class adventureGame {
                                 System.out.printf("\"You have defeated a great evil today and have earned our divine gratitude.\nLive the rest of your days in your castle.\nWell see you when you pass to the next realm, Great Hero %s\"", heroName);
                                 System.exit(0);
                             }
-                            }
+                        }
                         else{
                             System.out.println("You choose to ignore Caliburn and your soul is cursed for all of eternity");
                             System.exit(0);
                         }
-                        }
+                    }
                     System.exit(0);
                 }
 
@@ -715,7 +715,7 @@ public class adventureGame {
                         " )_ !  ,  ;  ;  |" + "    )_ !  ,  ;  ;  |\n" +
                         " || .  .  :  :  |" + "    || .  .  :  :  |\n" +
                         " |\" .  |  :  .  |" + "    |\" .  |  :  .  |\n" +
-                        " |Health_;----._|" + "    |Armor_;----.__|");
+                        " |XOXXOX_;----._|" + "    |OXOOX_;----.__|");
                 System.out.println("There are two paths before you, the doors are labeled with unreadable runes. Which path will you take? Left or Right");
                 String pathChoice = sc.nextLine();
                 if (pathChoice.trim().equalsIgnoreCase("left")) {
@@ -867,7 +867,7 @@ public class adventureGame {
                         "                      |/ / /  `'  `  |/|/\n" +
                         "                       \\|\\|\n");
                 System.out.println("You have arrived in the Throne Room, there is a large winged figured in front of you, it is much scarier than your previous opponents.\n");
-                System.out.println("\"Prepare yourself human, I have killed more people then you've ever meet\" The winged figure says.");
+                System.out.println("\"Prepare yourself human, I have killed more people then you've ever met\" The winged figure says.");
                 while (heroHealth > 0 && vampireLordHealth > 0) {
                     System.out.println(heroName + "'s Health: " + heroHealth + ", Armor: " + heroArmor + ", Potions: " + heroPotion);
                     System.out.println(vampireLordName + "'s Health: " + vampireLordHealth + ", Armor: " + vampireLordArmor);
