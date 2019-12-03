@@ -8,7 +8,6 @@ public class ServerNameGenerator {
     private static String randomElement(String[] strings) {
         int sng = (int) (Math.random() * strings.length);
         return strings[sng];
-        //sng = Server Name Generator. It's like RNG.
     }
 
     public static String generator(String[] strings1, String[] strings2) {

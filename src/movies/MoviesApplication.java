@@ -5,6 +5,7 @@
 
 public class MoviesApplication {
     static Input input = new Input();
+
     public static void main(String[] args) {
         boolean keepGoing;
         Scanner sc = new Scanner(System.in);
@@ -19,7 +20,8 @@ public class MoviesApplication {
                     "4 - view movies in the horror category \n" +
                     "5 - view movies in the scifi category \n" +
                     "6 - view movies in the musical category \n" +
-                    "7 - view movies in the comedy category \n");
+                    "7 - view movies in the comedy category \n" +
+                    "8 - Add a movie\n");
 
             String userAnswer = sc.nextLine();
 
@@ -39,13 +41,16 @@ public class MoviesApplication {
                 System.out.println(displayCategory("musical"));
             } else if (userAnswer.equals("7")) {
                 System.out.println(displayCategory("comedy"));
+            } else if (userAnswer.equals("8")) {
+                addMovie();
             } else {
-                System.out.println("ಠ_ಠ That wasn't a valid entry.");
+                System.out.println("That wasn't a valid entry.");
             }
             System.out.println("Would you like to keep going?");
             keepGoing = input.yesNo();
         } while (keepGoing);
     }
+
     public static String displayMovies(Movie[] movie) {
         String movies = "";
         for (int i = 0; i < movie.length; i++) {
@@ -53,6 +58,7 @@ public class MoviesApplication {
         }
         return movies;
     }
+
     public static String displayCategory(String category) {
         Movie[] movie = MoviesArray.findAll();
         String categories;
@@ -66,4 +72,17 @@ public class MoviesApplication {
         return movies;
     }
 
+    //bonus
+    public static void addMovie() {
+        Movie[] movie = MoviesArray.findAll();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is the title of the movie you would like to add?");
+        String name = sc.nextLine();
+        System.out.println("What is the category of your movie?");
+        String category = sc.next();
+        Movie[] newList = Arrays.copyOf(movie, movie.length + 1);
+        newList[newList.length - 1] = new Movie(name, category);
+        System.out.println(displayMovies(newList));
+
+    }
 }
