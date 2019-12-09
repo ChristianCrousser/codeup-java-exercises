@@ -13,7 +13,7 @@ public class TwentyOneSticks {
 
         while (numSticks > 0) {
 
-            if (goFirst.equals("y") || goFirst.equals("Y")) {
+            if (goFirst.equalsIgnoreCase("y")) {
                 System.out.println("There are " + numSticks + " sticks");
                 System.out.println("How many sticks to take? (1 or 2)");
                 numToTake = take.nextInt();
