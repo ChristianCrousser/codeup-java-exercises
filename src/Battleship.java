@@ -12,21 +12,16 @@ public class Battleship {
         System.out.println("**** Welcome to Battle Ships game ****");
         System.out.println("Right now, sea is empty\n");
 
-        //Step 1 – Create the ocean map
         createOceanMap();
 
-        //Step 2 – Deploy player’s ships
         deployPlayerShips();
 
-        //Step 3 - Deploy computer's ships
         deployComputerShips();
 
-        //Step 4 Battle
         do {
             Battle();
         }while(Battleship.playerShips != 0 && Battleship.computerShips != 0);
 
-        //Step 5 - Game over
         gameOver();
     }
 
