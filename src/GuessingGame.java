@@ -1,30 +1,51 @@
+import java.util.Random;
 import java.util.Scanner;
-import java.util.InputMismatchException;
+import java.lang.System;
+
 
 public class GuessingGame {
-    public static void main(String[] args) {
-        int input = -1, answer = 64;
 
-        Scanner scan = new Scanner(System.in);
+    public static void main(String[] args){
 
-        do {
-            System.out.println("I'm thinking of a number between 1 and 100.");
-            System.out.println("Can you guess it?");
+        System.out.println("Hello and welcome to my number guessing game.");
+        System.out.println("Pick a number: ");
 
-            try {
-                input = scan.nextInt();
-            } catch (InputMismatchException ex) {
-                System.out.println("Invalid Input!");
-                continue;
+        Scanner inputnum = new Scanner(System.in);
+        int maxnum;
+        maxnum = inputnum.nextInt();
+
+        Random rand = new Random();
+        int number = rand.nextInt(maxnum);
+        int tries = 0;
+        Scanner input = new Scanner(System.in);
+        int guess;
+        boolean win = false;
+
+        while (win == false){
+
+            System.out.println("Guess a number between 1 and "+ maxnum +": ");
+            guess = input.nextInt();
+            tries++;
+
+            if (guess == number){
+                win = true;
+
             }
 
-            if (input == answer)
-                System.out.println("**RIGHT**");
-            else {
-                System.out.println("...Sorry, you're too " + (input < answer ? "low" : "high"));
+            else if(guess < number){
+                System.out.println("Number is to low, tray again");
 
-                System.out.println("Try again!");
             }
-        } while (answer != input);
+
+            else if(guess > number){
+                System.out.println("Number is to high, try again");
+
+            }
+
+        }
+
+        System.out.println("You win!");
+        System.out.println("It took you "+ tries + " tries.");
+
     }
 }
