@@ -62,6 +62,12 @@ public class Warmup {
 //        System.out.println(SimpleAdding(s.nextLine()));
 //    }
 
+//    public static void main(String args[]) {
+//
+//        System.out.println("working");
+//    }
+//        public static double warmup (double base, double exponent)
+
 }
 
 
