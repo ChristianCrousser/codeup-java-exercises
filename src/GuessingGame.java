@@ -2,9 +2,8 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class GuessingGame {
-    public static void main(String[] args) { // No need to throw IOException
-        int input = -1, answer = 64; // Initialize input for if the user types
-        // in invalid input on the first loop
+    public static void main(String[] args) {
+        int input = -1, answer = 64;
 
         Scanner scan = new Scanner(System.in);
 
@@ -16,17 +15,14 @@ public class GuessingGame {
                 input = scan.nextInt();
             } catch (InputMismatchException ex) {
                 System.out.println("Invalid Input!");
-                continue; // Skips to the next loop iteration if invalid input
+                continue;
             }
 
             if (input == answer)
                 System.out.println("**RIGHT**");
             else {
                 System.out.println("...Sorry, you're too " + (input < answer ? "low" : "high"));
-                // ^ Ternary operator; you may not have learned this yet, but it 
-                // just does a conditional return (if the value before the '?' is
-                // true, then return the value before the ':'; else return the 
-                // value after.)
+
                 System.out.println("Try again!");
             }
         } while (answer != input);
