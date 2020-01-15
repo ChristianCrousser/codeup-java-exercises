@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Battleship {
+    //Set up ints for ships and grid map along with guesses for user and computer players
     public static int numRows = 10;
     public static int numCols = 10;
     public static int playerShips;
