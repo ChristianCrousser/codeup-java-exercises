@@ -92,6 +92,14 @@ public class Warmup {
 //    }
 
 
+//    public static void main(String[] args)
+//    {
+//        Random generate = new Random();
+//        String[] name = {"John", "Marcus", "Susan", "Henry"};
+//
+//        System.out.println("The random person is " + name[generate.nextInt(4)]);
+//
+//    }
 
 
 
